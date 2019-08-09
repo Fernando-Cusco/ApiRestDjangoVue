@@ -4,6 +4,5 @@ from rest_framework import viewsets
 
 #crud sobre el objeto
 class LibroViewSet(viewsets.ModelViewSet):
-    querySet = Libro.objects.all()
+    queryset = Libro.objects.all()
     serializer_class = LibroSerializer
-    
