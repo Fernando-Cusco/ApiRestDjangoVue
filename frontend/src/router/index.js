@@ -21,7 +21,7 @@ export default new Router({
       component: ListaLibro
     },
     {
-      path: '/libros/editar',
+      path: '/libros/:libroId/editar',
       name: 'EditarLibro',
       component: EditarLibro
     }
