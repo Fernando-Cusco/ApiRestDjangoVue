@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data () {
     return {
@@ -26,6 +28,21 @@ export default {
       ],
       libros: []
     }
+  },
+  methods:{
+
+    getLibros () {
+      const path = 'http://localhost:8000/api/v1.0/libros/'
+      axios.get(path).then((response) => {
+        this.libros = response.data
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }
+  },
+  created () {
+    this.getLibros()
   }
 }
 </script>
