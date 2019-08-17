@@ -43,6 +43,7 @@
 </template>
 <script>
 import axios from 'axios'
+import swal from 'sweetalert'
   export default {
     data() {
       return {
@@ -60,7 +61,7 @@ import axios from 'axios'
           axios.put(path, this.form).then((response) => {                                      //hacemos la peticion
             this.form.title = response.data.title
             this.form.description = response.data.description
-            alert("Libro actualizado")
+            swal("Libro actualizado", "", "success")
           })
           .catch((error) =>{
             console.log(error);
