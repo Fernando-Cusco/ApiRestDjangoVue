@@ -9,7 +9,7 @@
               <b-button size="sm" variant="primary" :to="{name:'EditarLibro', params: {libroId: data.item.id}}">
                 Editar
               </b-button>
-              <b-button size="sm" variant="danger">
+              <b-button size="sm" variant="danger" :to="{name:'EliminarLibro', params: {libroId: data.item.id}}">
                 Eliminar
               </b-button>
             </template>
