@@ -2,14 +2,18 @@
   <div class="container">
     <div class="row">
       <div class="col text-left">
-        <h2>Lista de libros</h2>
+        <div class="">
+          <h2>Lista de libros</h2>
+          <b-button size="sm" :to="{name: 'CrearLibro'}" variant="primary">Nuevo Libro</b-button>
+        </div>
+        <br>
         <div class="col-md-12">
           <b-table striped hover :items="libros" :fields="fields">
             <template slot="action" slot-scope="data">
-              <b-button size="sm" variant="primary">
+              <b-button size="sm" variant="primary" :to="{name:'EditarLibro', params: {libroId: data.item.id}}">
                 Editar
               </b-button>
-              <b-button size="sm" variant="danger">
+              <b-button size="sm" variant="danger" :to="{name:'EliminarLibro', params: {libroId: data.item.id}}">
                 Eliminar
               </b-button>
             </template>
