@@ -2,7 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col text-left">
-        <h2>Lista de libros</h2>
+        <div class="">
+          <h2>Lista de libros</h2>
+          <b-button size="sm" :to="{name: 'CrearLibro'}" variant="primary">Nuevo Libro</b-button>
+        </div>
+        <br>
         <div class="col-md-12">
           <b-table striped hover :items="libros" :fields="fields">
             <template slot="action" slot-scope="data">

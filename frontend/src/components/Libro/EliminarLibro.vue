@@ -11,7 +11,9 @@
     <div class="row">
       <div class="col">
         <b-button v-on:click="eliminarLibro" variant="danger">Eliminar</b-button>
+        <b-button type="submit" class="btn-large-space" variant="primary" :to="{ name: 'ListaLibro'}">Cancelar</b-button>
       </div>
+
 
     </div>
   </div>

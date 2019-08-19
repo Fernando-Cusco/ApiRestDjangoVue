@@ -6,6 +6,7 @@ import HelloWorld from '@/components/HelloWorld'
 import ListaLibro from '@/components/Libro/ListaLibro'
 import EditarLibro from '@/components/Libro/EditarLibro'
 import EliminarLibro from '@/components/Libro/EliminarLibro'
+import CrearLibro from '@/components/Libro/CrearLibro'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/libros/:libroId/eliminar',
       name: 'EliminarLibro',
       component: EliminarLibro
+    },
+    {
+      path: '/libros/crear',
+      name: 'CrearLibro',
+      component: CrearLibro
     }
   ],
   mode: 'history'
